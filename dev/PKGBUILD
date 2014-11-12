@@ -1,0 +1,17 @@
+# Maintainer: Dario Giovannetti <dev at dariogiovannetti dot net>
+
+pkgname='python2-wxclasses'
+pkgver='1.0.0'
+pkgrel=1
+pkgdesc="Classes for wxPython."
+arch=('any')
+url="https://github.com/kynikos/lib.py.wxclasses"
+license=('GPL3')
+depends=('python2')
+source=("http://downloads.sourceforge.net/project/kynikos/arch/$pkgname-$pkgver.tar.bz2")
+sha256sums=('850c4f8b67f5c9c23cb5c82a599c7e73d6e6e4a6a63cd4da15a7da03dfb7b816')
+
+package() {
+    cd "$srcdir/$pkgname-$pkgver"
+    python2 setup.py install --root="$pkgdir" --optimize=1
+}

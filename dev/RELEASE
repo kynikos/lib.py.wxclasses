@@ -1,0 +1,29 @@
+* Update files:
+  - Copyright dates
+  - setup.py
+  - docstrings (@version, @date...)
+  - PKGBUILD.*
+* Create an archive for each Python version:
+  1. Create a copy of the src folder
+  2. Remove .pyc and .pyo files
+  3. Put LICENSE in src
+  4. Rename src -> pkgname-version
+  5. Archive package
+* Copy PKGBUILD.* to PKGBUILD
+* Update file checksums in PKGBUILD.* and PKGBUILDs
+  Use updpkgsums
+* Upload the archives to SourceForge
+* Check the PKGBUILDs with namcap
+* Test PKGBUILD installation
+* Commit changes
+* Tag release merge commit
+* Push commits to GitHub
+* Update documentation:
+  - Changelog
+  - New features
+  - Links to downloads
+  - Screenshots
+  - Forum thread
+  - Wiki
+  - GitHub page
+* Upload PKGBUILDs to AUR
